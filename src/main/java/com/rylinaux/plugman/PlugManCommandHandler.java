@@ -87,9 +87,6 @@ public class PlugManCommandHandler implements CommandExecutor {
             case "unload":
                 cmd = new UnloadCommand(sender);
                 break;
-            case "check":
-                cmd = new CheckCommand(sender);
-                break;
         }
 
         cmd.execute(sender, command, label, args);

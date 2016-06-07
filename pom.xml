@@ -12,19 +12,7 @@
     <name>PlugMan</name>
     <description>Plugin manager for Bukkit servers.</description>
     <url>http://dev.bukkit.org/bukkit-plugins/plugman/</url>
-
     <inceptionYear>2010</inceptionYear>
-
-    <developers>
-        <developer>
-            <name>Ryan Clancy</name>
-            <email>rylinaux@gmail.com</email>
-            <id>rylinaux</id>
-            <roles>
-                <role>Lead Developer</role>
-            </roles>
-        </developer>
-    </developers>
 
     <licenses>
         <license>
@@ -33,18 +21,10 @@
         </license>
     </licenses>
 
-    <ciManagement>
-        <system>Jenkins</system>
-        <url>http://ci.ryan-clancy.com/</url>
-    </ciManagement>
-
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/rylinaux/PlugMan/issues</url>
-    </issueManagement>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <repositories>
@@ -58,7 +38,9 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.9-R0.1-SNAPSHOT</version>
+            <version>1.9-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>/opt/msm/src/spigot/craftbukkit.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -69,11 +51,6 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.3.6</version>
         </dependency>
     </dependencies>
 
